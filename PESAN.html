@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesan Spesial</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f7d794;
+      color: #2d3436;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #e74c3c;
+    }
+
+    p {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #c0392b;
+    }
+
+    /* Animasi teks */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .message {
+      animation: fadeIn 3s ease;
+    }
+
+    /* Gaya untuk musik */
+    audio {
+      display: none;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Pesan Spesial untuk Kamu</h1>
+  
+  <p class="message">Hai, aku hanya ingin mengatakan... kamu sangat berarti buat aku!</p>
+  
+  <button onclick="playMusic()">Play Lagu</button>
+
+  <!-- Embed musik (dapat diganti dengan file mp3 yang lain) -->
+  <audio id="background-music">
+    <source src="DJ DITINGGAL BANG DIKA SLOWED VIRAL TIK TOK TERBARU 2024.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    // Fungsi untuk memutar musik
+    function playMusic() {
+      var music = document.getElementById('background-music');
+      music.play();
+      alert('Lagu sedang diputar!');
+    }
+  </script>
+
+</body>
+</html>
